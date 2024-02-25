@@ -64,7 +64,7 @@ app.post('/cadastro', async (req, res) => {
     try {
         // Criptografar a senha antes de armazená-la no banco de dados
         const hashedPassword = await hashPassword(password);
-        
+
         // Inserir novo usuário no banco de dados com a senha criptografada
         db.run('INSERT INTO Usuario (Name, Email, Password) VALUES (?, ?, ?)', [name, email, hashedPassword], (err) => {
             if (err) {
