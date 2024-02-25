@@ -1,0 +1,26 @@
+/* styles.css */
+
+/* Estilo para o formulário */
+form {
+    margin-bottom: 20px;
+}
+
+/* Estilo para o botão de adicionar usuário */
+.btn-add-user {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Estilo para a lista de usuários */
+#userList {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilo para cada item da lista de usuários */
+#userList li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}

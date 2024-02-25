@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Link para o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link para o arquivo styles.css -->
+    <link rel="stylesheet" href="styles.css">
+<style>
+
+/* Estilo customizado para o dashboard */
+
+body {
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+}
+
+.container {
+    max-width: 1200px; /* Largura máxima do contêiner */
+    margin: 20px auto; /* Centralizar o contêiner na página e adicionar um espaçamento superior */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #fff; /* Cor de fundo do contêiner */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.header {
+    text-align: center; /* Centralizar o cabeçalho */
+    margin-bottom: 30px; /* Espaçamento inferior */
+}
+
+.card {
+    margin-bottom: 20px; /* Espaçamento inferior entre os cartões */
+    background-color: #f8f9fa; /* Cor de fundo do cartão */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.card-body {
+    padding: 20px; /* Espaçamento interno do corpo do cartão */
+}
+
+.card-title {
+    font-size: 20px; /* Tamanho do título do cartão */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    color: #333; /* Cor do texto */
+}
+
+.card-text {
+    margin-bottom: 10px; /* Espaçamento inferior */
+    color: #555; /* Cor do texto */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Cor de fundo */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Cantos arredondados */
+    padding: 10px 20px; /* Espaçamento interno */
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Sem sublinhado */
+    cursor: pointer; /* Cursor do mouse */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Informações do Usuário</h5>
+                <div class="info-item">
+                    <label>Nome:</label>
+                    <span id="userName"><%= user.NAME %></span>
+                </div>
+                <div class="info-item">
+                    <label>Email:</label>
+                    <span id="userEmail"><%= user.EMAIL %></span>
+                </div>
+                <div class="info-item">
+                    <label>Telefone:</label>
+                    <span id="userPhone"><%= user.PHONE %></span>
+                </div>
+            </div>
+        </div>
+        <div class="logout">
+            <a href="/logout" class="btn btn-danger">Sair</a>
+        </div>
+    </div>
+
+    <script>
+        /*// Recuperar informações do usuário do servidor
+        fetch('/userInfo')
+            .then(response => response.json())
+            .then(user => {
+                document.getElementById('userName').textContent = user.NAME;
+                document.getElementById('userEmail').textContent = user.EMAIL;
+                document.getElementById('userPhone').textContent = user.PHONE;
+            })
+            .catch(error => console.error('Error fetching user info:', error));*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <!-- Link para o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style-cadastro.css">
+<style>
+body {
+    margin-top: 35px;
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+}
+
+.container {
+    max-width: 400px; /* Largura máxima do contêiner */
+    margin: 0 auto; /* Centralizar o contêiner na página */
+    padding: 40px; /* Espaçamento interno */
+    background-color: #fff; /* Cor de fundo do contêiner */
+    border-radius: 30px; /* Cantos arredondados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+h1 {
+    text-align: center; /* Centralizar o título */
+    margin-bottom: 30px; /* Espaçamento inferior */
+    color: #333; /* Cor do texto */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+label {
+    font-weight: bold; /* Texto em negrito */
+    color: #555; /* Cor do texto */
+}
+
+input.form-control {
+    border: 1px solid #ced4da; /* Borda */
+    border-radius: 4px; /* Cantos arredondados */
+}
+
+button.btn-primary {
+    background-color: #007bff; /* Cor de fundo */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Cantos arredondados */
+    padding: 10px 20px; /* Espaçamento interno */
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+a.btn-link {
+    color: #007bff; /* Cor do link */
+    text-decoration: none; /* Sem sublinhado */
+}
+
+a.btn-link:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro</h1>
+        <form action="/cadastro" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar-se</button>
+        <!-- Botão de Login -->
+        <a href="/" class="btn btn-link">Entrar</a>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Link para o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link para o arquivo styles.css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard</h1>
+   	<p>Bem-vindo, <%= user.NameE %>!</p>
+    	<p>Email: <%= user.Email %></p>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Informações do Usuário</h5>
+                <p class="card-text">Nome: <span id="userName"></span></p>
+                <p class="card-text">Email: <span id="userEmail"></span></p>
+                <p class="card-text">Telefone: <span id="userPhone"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Recuperar informações do usuário do servidor
+        fetch('/userInfo')
+            .then(response => response.json())
+            .then(user => {
+                document.getElementById('userName').textContent = user.NAME;
+                document.getElementById('userEmail').textContent = user.EMAIL;
+                document.getElementById('userPhone').textContent = user.PHONE;
+            })
+            .catch(error => console.error('Error fetching user info:', error));
+    </script>
+</body>
+</html>
+
+
